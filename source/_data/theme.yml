@@ -36,10 +36,10 @@ e_social:
 e_social_links: {}
 
 # CV download link
-cv_dl:
-  enable: true
-  dir: /attaches/Du_C_Resume.pdf
-  description: My Detail Resume :)
+#cv_dl:
+#  enable: true
+#  dir: /attaches/Du_C_Resume.pdf
+#  description: My Detail Resume :)
 
 # Box-shadow
 # display box-shadow on page or not
