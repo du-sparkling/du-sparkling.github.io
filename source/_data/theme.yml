@@ -2,8 +2,8 @@ favicon: /img/favicon.png
 # Change to your profile picture
 avatar: /img/avatar.jpg
 # if author sets in hexo_config, this string doesn't work
-author: 'Du'
-author_bio: 'Your biography can be writed down here.'
+author: 'Du_Cheng'
+author_bio: 'Data Person'
 
 since: 2026
 
@@ -11,9 +11,12 @@ since: 2026
 # #title 为页内跳转，单页模式
 # 可以选择外链或其他页面
 menu:
-  Publications: /#Publications
+
   About: /
-  Blog: https://phower.me
+  Research: /#Research
+  Things I make: /#Make
+  Other Writings: /#Writing
+
 
 # flink picture will load if avator link calls on error
 loading_bg:
@@ -25,30 +28,18 @@ loading_bg:
 social:
   enable: true
 social_links:
-  fab fa-twitter: /
-  fab fa-facebook-square: /
-  fab fa-github: /
-  fab fa-stack-overflow: /
-  fab fa-linkedin: /
-  fab fa-weibo: /
-  fab fa-weixin: /
-  fab fa-qq: /
-  fas fa-envelope: / #E-mail
-  fas fa-rss: /  #rss
+  fab fa-linkedin: https://www.linkedin.com/in/du-cheng/
+  fas fa-envelope: mailto:dcheng3366@gmail.com
 
-# Additional social_links，额外添加自定义链接，可显示链接名称
-# name: url || icon_name
 e_social:
-  enable: true
-e_social_links:
-  Google Scholar: / || fas fa-graduation-cap
-  ORCID: / || fab fa-orcid
+  enable: false
+e_social_links: {}
 
 # CV download link
 cv_dl:
   enable: true
-  dir: /attaches/CV.pdf
-  description: My Detail CV.
+  dir: /attaches/Du_C_Resume.pdf
+  description: My Detail Resume :)
 
 # Box-shadow
 # display box-shadow on page or not
