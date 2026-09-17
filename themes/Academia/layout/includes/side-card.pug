@@ -7,20 +7,20 @@
             p.author-bio= theme.author_bio
         .author-links
             button.btn.m-social-links Links
-            if(theme.social.enable)
+            if(theme.social && theme.social.enable)
                 ul.social-icons
                     each url, icon in theme.social_links
                         li
                             a.social-icon(href=url target="_blank")
                                 i(class=icon aria-hidden="true")
-            if(theme.e_social.enable)
+            if(theme.e_social && theme.e_social.enable)
                 ul.social-links
                     each value, name in theme.e_social_links
                         li
                             a.e-social-link(href=url_for(trim(value.split('||')[0])) target="_blank")
                                 i(class=trim(value.split('||')[1]) aria-hidden="true")
                                 span= name
-        if(theme.cv_dl.enable)
+        if(theme.cv_dl && theme.cv_dl.enable)
             a.cv-links(href=url_for(theme.cv_dl.dir) target="_blank")
                 i(class="fas fa-file-pdf" aria-hidden="true")
                     span= theme.cv_dl.description

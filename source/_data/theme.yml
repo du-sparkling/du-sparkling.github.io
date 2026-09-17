@@ -14,8 +14,8 @@ menu:
 
   About: /
   Research: /#Research
-  Things I make: /#Make
-  Other Writings: /#Writing
+  Things I make: /make/
+  Other Writings: /writing/
 
 
 # flink picture will load if avator link calls on error
@@ -31,15 +31,15 @@ social_links:
   fab fa-linkedin: https://www.linkedin.com/in/du-cheng/
   fas fa-envelope: mailto:dcheng3366@gmail.com
 
-e_social:
-  enable: false
-e_social_links: {}
+#e_social:
+#  enable: false
+#e_social_links: {}
 
 # CV download link
-#cv_dl:
-#  enable: true
-#  dir: /attaches/Du_C_Resume.pdf
-#  description: My Detail Resume :)
+cv_dl:
+  enable: false
+  dir: /attaches/Du_C_Resume.pdf
+  description: My Detail Resume :)
 
 # Box-shadow
 # display box-shadow on page or not

@@ -62,7 +62,7 @@ $(function () {
     });
 
     // pjax
-    $(document).pjax('a[target!=_blank]','.page', {
+    $(document).pjax('a[target!=_blank]:not(.gallery-thumb):not(.lightbox-close)','.page', {
         fragment: '.page',
         timeout: 5000
     });
@@ -85,9 +85,26 @@ $(function () {
         }
     });
 
+    $(document).on('click', '.gallery-thumb', function (event) {
+        event.preventDefault();
+        $(this.hash).addClass('is-open');
+    });
+
+    $(document).on('click', '.lightbox-close', function (event) {
+        event.preventDefault();
+        $(this).closest('.lightbox').removeClass('is-open');
+    });
+
+    $(document).on('click', '.lightbox', function (event) {
+        if (event.target === this) {
+            $(this).removeClass('is-open');
+        }
+    });
+
     // smooth scroll
     $(function () {
         $('a[href*=\\#]:not([href=\\#])').click(function () {
+            if ($(this).hasClass('gallery-thumb') || $(this).hasClass('lightbox-close')) return;
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
